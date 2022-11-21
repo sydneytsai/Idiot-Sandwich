@@ -9,7 +9,7 @@ import AddScreen from './screens/AddScreen';
 import ProfileScreen from './screens/ProfileScreen';
 
 //Screen names
-const homeName = "Idiot Sandwich";
+const homeName = "Home";
 const addName = "Add";
 const profileName = "Profile";
 

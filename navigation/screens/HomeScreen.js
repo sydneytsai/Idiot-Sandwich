@@ -4,12 +4,12 @@ import { View, Text, Button} from 'react-native';
 export default function HomeScreen({navigation}) {
     return (
         <View style={{ display: 'flex', alignItems: 'center', flexDirection: 'row'}}>
-            <Button 
-                onPress={() => alert('This is the "Home" screen.')} 
+            <Button
+                onPress={() => alert('Vegetarian')} 
                 title="Vegetarian">
             </Button>
             <Button 
-                onPress={() => alert('This is the "Home" screen.')} 
+                onPress={() => alert('Cuisine')} 
                 title="Cuisine">
             </Button>
         </View>
