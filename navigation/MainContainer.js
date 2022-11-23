@@ -7,11 +7,15 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from './screens/HomeScreen';
 import AddScreen from './screens/AddScreen';
 import ProfileScreen from './screens/ProfileScreen';
+import ShareScreen from './screens/ShareScreen';
+import VideoScreen from './screens/VideoScreen';
 
 //Screen names
 const homeName = "Home";
 const addName = "Add";
 const profileName = "Profile";
+const shareName = "Share";
+const videoName = "Video";
 
 const Tab = createBottomTabNavigator();
 
@@ -33,6 +37,12 @@ function MainContainer() {
 
             } else if (rn === profileName) {
               iconName = focused ? 'md-person' : 'md-person-outline';
+
+            } else if (rn === shareName) {
+              iconName = focused ? 'share-social' : 'share-social-outline';
+
+            } else if (rn === videoName) {
+              iconName = focused ? 'camera' : 'camera-outline';
             }
 
             // You can return any component that you like here!
@@ -47,7 +57,9 @@ function MainContainer() {
         }}>
 
         <Tab.Screen name={homeName} component={HomeScreen} />
+        <Tab.Screen name={videoName} component={VideoScreen} />
         <Tab.Screen name={addName} component={AddScreen} />
+        <Tab.Screen name={shareName} component={ShareScreen} />
         <Tab.Screen name={profileName} component={ProfileScreen} />
 
       </Tab.Navigator>
