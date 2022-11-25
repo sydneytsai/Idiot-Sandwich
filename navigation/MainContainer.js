@@ -12,7 +12,7 @@ import VideoScreen from './screens/VideoScreen';
 
 //Screen names
 const homeName = "Home";
-const addName = "Add";
+const addName = "Add Recipe";
 const profileName = "Profile";
 const shareName = "Share";
 const videoName = "Video";
