@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TouchableOpacity, Text, TextInput, StyleSheet, SafeAreaView, Pressable } from 'react-native';
+import { TouchableHighlight, TouchableOpacity, Text, TextInput, StyleSheet, SafeAreaView, Pressable } from 'react-native';
 
 function AddScreen({navigation}) {
 
@@ -7,6 +7,8 @@ function AddScreen({navigation}) {
     const [size, onChangeSize] = React.useState(null);
     const [time, onChangeTime] = React.useState(null);
     const [ingredients, onChangeIngredients] = React.useState(null);
+    var [ isPress, setIsPress ] = React.useState(false);
+
 
     return (
         <SafeAreaView style={styles.layout}>
@@ -41,15 +43,15 @@ function AddScreen({navigation}) {
                 Difficulty
             </Text>
             <SafeAreaView style={styles.difficulty}>
-                <TouchableOpacity onPress={() => alert('difficult')} style={styles.difficultyButtons}>
+                <TouchableOpacity style={styles.difficultyButtons}>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => alert('difficult')} style={styles.difficultyButtons}>
+                <TouchableOpacity style={styles.difficultyButtons}>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => alert('difficult')} style={styles.difficultyButtons}>
+                <TouchableOpacity style={styles.difficultyButtons}>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => alert('difficult')} style={styles.difficultyButtons}>
+                <TouchableOpacity style={styles.difficultyButtons}>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => alert('difficult')} style={styles.difficultyButtons}>
+                <TouchableOpacity style={styles.difficultyButtons}>
                 </TouchableOpacity>
             </SafeAreaView>
             <Text style={styles.headers}>
@@ -115,8 +117,8 @@ const styles = StyleSheet.create({
         padding: 20,
         margin: 15,
         borderRadius: 100,
-        backgroundColor:"#D3D3D3", 
-    }
+        backgroundColor: "lightgrey",
+    },
   });
 
 export default AddScreen;
