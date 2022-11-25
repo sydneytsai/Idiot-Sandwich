@@ -20,14 +20,44 @@ function HomeScreen({navigation}) {
                         Ingredients
                     </Text>
                 </Pressable>
+                <Pressable style={styles.filterButtons} onPress={() => alert('Ingredients')}>
+                    <Text>
+                        Breakfast
+                    </Text>
+                </Pressable>
+                <Pressable style={styles.filterButtons} onPress={() => alert('Ingredients')}>
+                    <Text>
+                        Lunch
+                    </Text>
+                </Pressable>
+                <Pressable style={styles.filterButtons} onPress={() => alert('Ingredients')}>
+                    <Text>
+                        Dinner
+                    </Text>
+                </Pressable>
+                <Pressable style={styles.filterButtons} onPress={() => alert('Ingredients')}>
+                    <Text>
+                        Beverages
+                    </Text>
+                </Pressable>
             </ScrollView>
             <ScrollView style={styles.recipiesScrollView} contentContainer={styles.recipiesContentContainer}>
-                <Text>
-                    Grilled Cheese
-                </Text>
-                <Text>
-                    Grilled Cheese
-                </Text>
+                <View style={styles.recipeCard}>
+                    <View style={styles.recipeDescriptionContainer}>
+                        <Text>
+                            Grilled Cheese
+                        </Text>
+                        <Text>
+                            Time: 10 minutes
+                        </Text>
+                        <Text>
+                            Difficulty: 1
+                        </Text>
+                        <Text>
+                            3 Ingredients
+                        </Text>
+                    </View>
+                </View>
             </ScrollView>
         </View>
     );
@@ -45,7 +75,8 @@ const styles = StyleSheet.create({
     },
     filterButtons: {
         backgroundColor:"lightgrey", 
-        margin: 10,
+        marginTop: 10,
+        margin: 5,
         paddingHorizontal: 10,
         paddingVertical: 5, 
         borderRadius: 25,
@@ -53,6 +84,9 @@ const styles = StyleSheet.create({
         height: 30,
         alignItems: "center",
         justifyContent: "center",
+        shadowOpacity: 5,
+        shadowColor: "lightgrey",
+        shadowOffset: { width: 1, height: 2 },
     },
     recipiesScrollView: {
         height: '80%',
@@ -63,6 +97,23 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center', 
     },
+    recipeCard: {
+        display: "flex",
+        flexDirection: "row",
+        height: '150%',
+        width: '100%',
+        alignSelf: "center", 
+        justifyContent: "center", 
+        borderWidth: 3,
+        alignItems: "center",
+    },
+    recipeDescriptionContainer: {
+        display: "flex",
+        flexDirection: "column",
+        alignSelf: "center", 
+        justifyContent: "center",
+        alignItems: "center",
+    }
 });
 
 export default HomeScreen

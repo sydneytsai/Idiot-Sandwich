@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { View, Text, Button} from 'react-native';
 
-export default function ProfileScreen({navigation}) {
+function ProfileScreen({navigation}) {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', }}>
             <Text
@@ -10,4 +10,6 @@ export default function ProfileScreen({navigation}) {
             </Text>
         </View>
     );
-}
+};
+
+export default ProfileScreen
