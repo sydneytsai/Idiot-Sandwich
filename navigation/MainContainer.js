@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -66,5 +67,11 @@ function MainContainer() {
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  screenName: {
+    fontSize: 60,
+  }
+});
 
 export default MainContainer;

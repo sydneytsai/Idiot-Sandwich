@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Text, TextInput, StyleSheet, SafeAreaView, Pressable} from 'react-native';
-import { withSafeAreaInsets } from 'react-native-safe-area-context';
+import { TouchableOpacity, Text, TextInput, StyleSheet, SafeAreaView, Pressable } from 'react-native';
 
 function AddScreen({navigation}) {
 
@@ -38,6 +37,21 @@ function AddScreen({navigation}) {
                 value={time}
                 keyboardType="numeric"
             />
+            <Text style={styles.headers}>
+                Difficulty
+            </Text>
+            <SafeAreaView style={styles.difficulty}>
+                <TouchableOpacity onPress={() => alert('difficult')} style={styles.difficultyButtons}>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => alert('difficult')} style={styles.difficultyButtons}>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => alert('difficult')} style={styles.difficultyButtons}>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => alert('difficult')} style={styles.difficultyButtons}>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => alert('difficult')} style={styles.difficultyButtons}>
+                </TouchableOpacity>
+            </SafeAreaView>
             <Text style={styles.headers}>
                 Ingredients
             </Text>
@@ -89,6 +103,20 @@ const styles = StyleSheet.create({
         color: "white",
         fontSize: 17,
     },
+    difficulty: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+
+    },
+    difficultyButtons: {
+        width: 30,
+        height: 30,
+        padding: 20,
+        margin: 15,
+        borderRadius: 100,
+        backgroundColor:"#D3D3D3", 
+    }
   });
 
 export default AddScreen;
