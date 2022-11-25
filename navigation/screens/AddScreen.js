@@ -30,7 +30,7 @@ function AddScreen({navigation}) {
                 keyboardType="numeric"
             />
             <Text style={styles.headers}>
-                Serving Size
+                Prep Time
             </Text>
             <TextInput
                 style={styles.input}
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         flexDirection: "column",
     },
     headers: {
-        paddingLeft: 10,
+        paddingLeft: 20,
         paddingTop: 10,
         fontWeight: "bold",
         fontSize: 20,
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     input: {
         height: 40,
         margin: 12,
-        padding: 10,
+        padding: 20,
         borderRadius: 25,
         backgroundColor: "#D3D3D3",
       },
