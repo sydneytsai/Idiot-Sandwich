@@ -1,14 +1,24 @@
 import * as React from 'react';
-import { View, Text} from 'react-native';
+import { SafeAreaView, Text, StyleSheet} from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 function ShareScreen({navigation}) {
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text
-                onPress={() => alert('This is the "Share" screen.')}
-                style={{ fontSize: 26, fontWeight: 'bold' }}>Share Screen</Text>
-        </View>
+        <SafeAreaView style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <ScrollView style={styles.shareScrollView} contentContainerStyle={styles.contentContainer}>
+
+            </ScrollView>
+        </SafeAreaView>
     );
 };
+
+const styles = StyleSheet.create({
+    shareScrollView: {
+
+    },
+    contentContainer: {
+
+    },
+});
 
 export default ShareScreen

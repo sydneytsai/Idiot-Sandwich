@@ -1,14 +1,30 @@
-import * as React from 'react';
-import { View, Text} from 'react-native';
+import React, {useState, useCallback} from 'react';
+import { SafeAreaView, StyleSheet, View, Button, Alert} from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import YoutubePlayer from 'react-native-youtube-iframe';
+
 
 function VideoScreen({navigation}) {
+
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text
-                onPress={() => alert('This is the "Video" screen.')}
-                style={{ fontSize: 26, fontWeight: 'bold' }}>Video Screen</Text>
-        </View>
+        <SafeAreaView style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <ScrollView style={styles.videoScrollView} contentContainerStyle={styles.contentContainer}>
+
+            </ScrollView>
+        </SafeAreaView>
     );
 };
+
+const styles = StyleSheet.create({
+    videoScrollView: {
+
+    },
+    contentContainer: {
+
+    },
+    videos: {
+        
+    }
+});
 
 export default VideoScreen

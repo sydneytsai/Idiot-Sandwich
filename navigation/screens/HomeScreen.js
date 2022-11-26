@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         alignSelf: "center", 
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "left",
     }
 });
 
