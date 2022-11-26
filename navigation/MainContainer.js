@@ -16,7 +16,7 @@ const homeName = "Home";
 const addName = "Add Recipe";
 const profileName = "Profile";
 const shareName = "Share";
-const videoName = "Video";
+const videoName = "Videos";
 
 const Tab = createBottomTabNavigator();
 

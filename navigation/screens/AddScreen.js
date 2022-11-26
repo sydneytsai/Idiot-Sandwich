@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TouchableHighlight, TouchableOpacity, Text, TextInput, StyleSheet, SafeAreaView, Pressable } from 'react-native';
+import { Button, TouchableOpacity, Text, TextInput, StyleSheet, SafeAreaView, Pressable } from 'react-native';
 
 function AddScreen({navigation}) {
 
@@ -7,11 +7,12 @@ function AddScreen({navigation}) {
     const [size, onChangeSize] = React.useState(null);
     const [time, onChangeTime] = React.useState(null);
     const [ingredients, onChangeIngredients] = React.useState(null);
-    var [ isPress, setIsPress ] = React.useState(false);
 
 
     return (
         <SafeAreaView style={styles.layout}>
+            <Button title='Upload Image' style={styles.uploadImage}>
+            </Button>
             <Text
                 style={styles.headers}>Recipe Title
             </Text>
@@ -76,8 +77,12 @@ function AddScreen({navigation}) {
 
 const styles = StyleSheet.create({
     layout: {
-        flex: 1,
+        marginTop: 10,
         flexDirection: "column",
+    },
+    uploadImage: {
+        color: "black",        
+        fontWeight: "bold",
     },
     headers: {
         paddingLeft: 20,
