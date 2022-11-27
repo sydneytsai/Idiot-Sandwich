@@ -1,14 +1,12 @@
 import * as React from 'react';
 import { Text, SafeAreaView, StyleSheet } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, View } from 'react-native-gesture-handler';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 function ProfileScreen({navigation}) {
     return (
         <SafeAreaView style={styles.profileContainer}>
-            <Ionicons name="settings-outline" style={styles.settingsIcon}>
-            </Ionicons>
-            <Text style={styles.headers}>
+            <Text style={styles.name}>
                 Jane Doe
             </Text>
             <Text style={styles.headers}>
@@ -27,7 +25,6 @@ function ProfileScreen({navigation}) {
                 Following
             </Text>
             <ScrollView style={styles.followingScrollView}>
-
             </ScrollView>
         </SafeAreaView>
     );
@@ -35,21 +32,34 @@ function ProfileScreen({navigation}) {
 
 const styles = StyleSheet.create({
     profileContainer: {
-        flexDirection: "column",
-        alignItems: 'center', 
+        flexDirection: "column", 
+    },
+    name: {
+        fontSize: 20,
+        fontWeight: "bold", 
+        color: "white",
+        backgroundColor: "#75975e",
+        paddingVertical: '18%',
+        paddingHorizontal: "38%",
     },
     headers: {
         fontSize: 20,
         fontWeight: "bold",
+        margin: 10,
+
     },
     settingsIcon: {
         size: 40,
         color: "lightgrey",
     },
     collectionScrollView: {
-        height: "35%",
+        height: "25%",
         width: '90%',
         alignSelf: 'center',
+    },
+    collection: {
+        width: 10,
+        backgroundColor: 'lightgrey',
     },
     tagsScrollView: {
         height: "15%",
@@ -62,8 +72,6 @@ const styles = StyleSheet.create({
     },
     tags: {
         backgroundColor:"lightgrey",
-        marginTop: 10,
-        margin: 5,
         paddingHorizontal: 10,
         paddingVertical: 5,
         width: 100,

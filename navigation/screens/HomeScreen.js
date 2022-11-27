@@ -22,17 +22,7 @@ function HomeScreen({navigation}) {
                 </Pressable>
                 <Pressable style={styles.filterButtons} onPress={() => alert('Ingredients')}>
                     <Text>
-                        Breakfast
-                    </Text>
-                </Pressable>
-                <Pressable style={styles.filterButtons} onPress={() => alert('Ingredients')}>
-                    <Text>
-                        Lunch
-                    </Text>
-                </Pressable>
-                <Pressable style={styles.filterButtons} onPress={() => alert('Ingredients')}>
-                    <Text>
-                        Dinner
+                        Time
                     </Text>
                 </Pressable>
                 <Pressable style={styles.filterButtons} onPress={() => alert('Ingredients')}>
