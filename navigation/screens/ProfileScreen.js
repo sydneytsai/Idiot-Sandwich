@@ -10,7 +10,7 @@ function ProfileScreen({navigation}) {
                 Jane Doe
             </Text>
             <Text style={styles.headers}>
-                Collection
+                Saved
             </Text>
             <ScrollView style={styles.collectionScrollView}>
 
