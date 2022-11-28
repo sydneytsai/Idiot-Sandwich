@@ -96,6 +96,9 @@ const styles = StyleSheet.create({
         justifyContent: "center", 
         borderWidth: 3,
         alignItems: "center",
+        borderRadius: 15,
+        borderColor: "lightgrey",
+
     },
     recipeDescriptionContainer: {
         display: "flex",
