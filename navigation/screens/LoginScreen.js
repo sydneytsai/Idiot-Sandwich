@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import { StyleSheet, Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
-import MainContainer from "../MainContainer.js"
 
 function ProfileScreen({navigation}) {
     const [email, setEmail] = useState('')
@@ -13,7 +12,7 @@ function ProfileScreen({navigation}) {
     }
 
     const onLoginPress = () => {
-        navigation.navigate("Home") 
+        navigation.navigate("MainContainer") 
     }
 
     return (

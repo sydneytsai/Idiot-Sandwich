@@ -26,6 +26,8 @@ function App() {
           <>
             <Stack.Screen name="Login" component={LoginScreen} />
             <Stack.Screen name="Registration" component={RegistrationScreen} />
+            <Stack.Screen name="MainContainer" component={MainContainer} />
+ 
           </>
         )}
       </Stack.Navigator>
