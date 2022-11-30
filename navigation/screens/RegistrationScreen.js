@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
         paddingLeft: 16
     },
     button: {
-        backgroundColor: '#788eec',
+        backgroundColor: '#75975e',
         marginLeft: 30,
         marginRight: 30,
         marginTop: 20,
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
         color: '#2e2e2d'
     },
     footerLink: {
-        color: "#788eec",
+        color: "#75975e",
         fontWeight: "bold",
         fontSize: 16
     }

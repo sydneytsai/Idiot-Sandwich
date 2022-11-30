@@ -20,7 +20,6 @@ const shareName = "Share";
 const videoName = "Videos";
 
 const Tab = createBottomTabNavigator();
-const Stack = createStackNavigator();
 
 function MainContainer() {
 

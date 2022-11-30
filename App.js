@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import MainContainer from './navigation/MainContainer';
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import {decode, encode} from 'base-64'
-if (!global.btoa) {  global.btoa = encode }
-if (!global.atob) { global.atob = decode }
 
+import MainContainer from './navigation/MainContainer';
 import LoginScreen from './navigation/screens/LoginScreen';
 import RegistrationScreen from './navigation/screens/RegistrationScreen';
+
+if (!global.btoa) {  global.btoa = encode }
+if (!global.atob) { global.atob = decode }
 
 const Stack = createStackNavigator();
 
