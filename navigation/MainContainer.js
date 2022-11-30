@@ -1,8 +1,9 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react'
 import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { createStackNavigator } from '@react-navigation/stack';
 
 // Screens
 import HomeScreen from './screens/HomeScreen';
@@ -19,8 +20,10 @@ const shareName = "Share";
 const videoName = "Videos";
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
 function MainContainer() {
+
   return (
     <NavigationContainer>
       <Tab.Navigator
