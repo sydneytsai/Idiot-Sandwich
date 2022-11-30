@@ -13,6 +13,7 @@ function RegistrationScreen({navigation}) {
     }
 
     const onRegisterPress = () => {
+        navigation.navigate('MainContainer')
     }
 
     return (
