@@ -1,10 +1,7 @@
 
 import firebase from 'firebase/compat/app';
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import '@firebase/auth';
-import '@firebase/firestore';
-
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 const firebaseConfig ={
     apiKey: "AIzaSyAzCNzwFY1j8Ef8GrPsiKSEoq2Ea5JHUGU",
@@ -18,8 +15,9 @@ const firebaseConfig ={
   
   if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
-  }else {
+  } else {
     firebase.app(); // if already initialized, use that one
   }
+
 
   export { firebase };
