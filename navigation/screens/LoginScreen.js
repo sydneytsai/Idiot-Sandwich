@@ -28,7 +28,7 @@ function ProfileScreen({navigation}) {
                             return;
                         }
                         const user = firestoreDocument.data()
-                        navigation.navigate('Home', {user})
+                        navigation.navigate('MainContainer', {user})
                     })
                     .catch(error => {
                         alert(error)
