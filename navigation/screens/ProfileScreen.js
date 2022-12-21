@@ -1,9 +1,11 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react'
 import { Text, SafeAreaView, StyleSheet } from 'react-native';
 import { ScrollView, View } from 'react-native-gesture-handler';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { firebase } from '../../src/firebase/config'
 
-function ProfileScreen({navigation}) {
+
+function ProfileScreen(props) {
     return (
         <SafeAreaView style={styles.profileContainer}>
             <Text style={styles.name}>

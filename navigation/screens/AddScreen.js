@@ -8,7 +8,6 @@ function AddScreen({navigation}) {
     const [time, onChangeTime] = React.useState(null);
     const [ingredients, onChangeIngredients] = React.useState(null);
 
-
     return (
         <SafeAreaView style={styles.layout}>
             <Button title='Upload Image' style={styles.uploadImage}>
@@ -55,6 +54,7 @@ function AddScreen({navigation}) {
                 <TouchableOpacity style={styles.difficultyButtons}>
                 </TouchableOpacity>
             </SafeAreaView>
+
             <Text style={styles.headers}>
                 Ingredients
             </Text>
