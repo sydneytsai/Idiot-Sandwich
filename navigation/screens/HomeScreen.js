@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Pressable, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, Pressable, StyleSheet, ScrollView, Image } from 'react-native';
 
 function HomeScreen({navigation}) {
     return (
@@ -33,6 +33,7 @@ function HomeScreen({navigation}) {
             </ScrollView>
             <ScrollView style={styles.recipiesScrollView} contentContainer={styles.recipiesContentContainer}>
                 <View style={styles.recipeCard}>
+                    <Image style={styles.images} source={require('../../assets/images/grilledcheese.jpeg')} />
                     <View style={styles.recipeDescriptionContainer}>
                         <Text>
                             Grilled Cheese
@@ -106,7 +107,13 @@ const styles = StyleSheet.create({
         alignSelf: "center", 
         justifyContent: "center",
         alignItems: "left",
-    }
+    },
+    images: {
+        alignSelf: "center",
+        height: '90%',
+        width: '40%', 
+        marginRight: 25,
+    },
 });
 
 export default HomeScreen
