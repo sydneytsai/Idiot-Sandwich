@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TextInput, TouchableOpacity, View, Image } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { firebase } from '../../src/firebase/config'
 
@@ -9,7 +9,8 @@ function ProfileScreen({navigation}) {
     const [password, setPassword] = useState('')
 
     const onFooterLinkPress = () => {
-        navigation.navigate('Registration')
+        //navigation.navigate('Registration')
+        navigation.navigate('MainContainer')
     }
 
     const onLoginPress = () => {
@@ -41,6 +42,7 @@ function ProfileScreen({navigation}) {
 
     return (
         <View style={styles.container}>
+            <Image style={styles.image} source={require('../../assets/images/logo.png')} />
             <KeyboardAwareScrollView
                 style={{ flex: 1, width: '100%' }}
                 keyboardShouldPersistTaps="always">
@@ -77,9 +79,18 @@ function ProfileScreen({navigation}) {
 };
 
 const styles = StyleSheet.create({
+    login:{
+        fontSize: 30,
+    },
+    image: {
+        alignSelf: "center",
+        height: '20%',
+        width: '100%',
+    },
     container: {
         flex: 1,
-        alignItems: 'center'
+        alignItems: 'center',
+        marginTop: '50%',
     },
     title: {
 

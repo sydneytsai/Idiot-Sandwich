@@ -19,7 +19,11 @@ function App() {
   if (loading) {	
     return (	
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+          initialRouteName="HomeActivity"
+          screenOptions={{headerShown: false}}
+        >
+          
           { user ? (
             <Stack.Screen name="MainContainer">
               {props => <MainContainer {...props} extraData={user} />}

@@ -69,9 +69,7 @@ function MainContainer() {
 }
 
 const styles = StyleSheet.create({
-  screenName: {
-    fontSize: 60,
-  }
+  
 });
 
 export default MainContainer;

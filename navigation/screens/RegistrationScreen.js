@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Text, TextInput, TouchableOpacity, View, StyleSheet } from 'react-native'
+import { Text, TextInput, TouchableOpacity, View, StyleSheet, Image } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { firebase } from '../../src/firebase/config'
 
@@ -46,6 +46,8 @@ function RegistrationScreen({navigation}) {
 
     return (
         <View style={styles.container}>
+            <Image style={styles.image} source={require('../../assets/images/logo.png')} />
+
             <KeyboardAwareScrollView
                 style={{ flex: 1, width: '100%' }}
                 keyboardShouldPersistTaps="always">
@@ -102,12 +104,15 @@ function RegistrationScreen({navigation}) {
 };
 
 const styles = StyleSheet.create({
+    image: {
+        alignSelf: "center",
+        height: '20%',
+        width: '100%',
+    },
     container: {
         flex: 1,
-        alignItems: 'center'
-    },
-    title: {
-
+        alignItems: 'center',
+        marginTop: '35%',
     },
     logo: {
         flex: 1,
