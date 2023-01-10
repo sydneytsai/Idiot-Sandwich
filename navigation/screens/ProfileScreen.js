@@ -13,6 +13,20 @@ function ProfileScreen(props) {
                 <Text style={styles.name}>
                     Jane Doe
                 </Text>
+                <SafeAreaView style={styles.numbers}>
+                    <SafeAreaView style={styles.data}>
+                        <Text style={styles.count}>0</Text>
+                        <Text style={styles.count}>Recipes</Text> 
+                    </SafeAreaView>
+                    <SafeAreaView style={styles.data}>
+                        <Text style={styles.count}>0</Text>
+                        <Text style={styles.count}>Added</Text> 
+                    </SafeAreaView>
+                    <SafeAreaView style={styles.data}>
+                        <Text style={styles.count}>0</Text>
+                        <Text style={styles.count}>Shared</Text> 
+                    </SafeAreaView>
+                </SafeAreaView>
             </SafeAreaView>
             <Text style={styles.headers}>
                 Saved
@@ -27,8 +41,21 @@ function ProfileScreen(props) {
 };
 
 const styles = StyleSheet.create({
+    numbers: {
+        flexDirection: "row",
+        justifyContent: "center",
+    },
+    data: {
+        marginTop: 10,
+        marginHorizontal: 35,
+    },
+    count: {
+        alignSelf: "center",
+        color: "#75975e",
+        fontWeight: "bold",
+        fontSize: 17,
+    },
     top: {
-        backgroundColor: "#75975e",
         height: "45%",
         justifyContent: "center",
     },
@@ -42,11 +69,10 @@ const styles = StyleSheet.create({
         flexDirection: "column", 
     },
     name: {
-        fontSize: 25,
-        fontWeight: "bold", 
-        color: "white",
+        fontSize: 30,
+        fontWeight: "bold",
         alignSelf: "center",
-        marginTop: 20,
+        marginTop: 10,
     },
     headers: {
         fontSize: 20,
